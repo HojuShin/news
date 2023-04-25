@@ -35,7 +35,13 @@ function renderTopNews() {
             .then((data) => {
                 const { articles } = data;
                 //createTopNewsElement함수 호출하여 데이터 할당 
+                //articleList(a태그)는 spinner(로딩이미지) 밑에 생성됨 
                 const articleList = articles.map((article) => createTopNewsElement(article));
+                console.log('articleList', articleList);
+
+                //articleList DOM 요소(a태그) 생성 완료후 로딩이미지 영역에 추가
+                articleSection.append(...articleList);
+                //articleSection(topNewsList) 밑으로 spinner, createTopNewsElement가 있음
             })
     }, 1500);
 
