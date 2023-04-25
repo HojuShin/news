@@ -62,3 +62,15 @@ footer {
     padding-bottom: 50px;
     color: #faebd7;
 }
+
+/* 로딩이미지 */
+.spinner-area {
+    display: flex;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-area img {
+    width: 50px;
+}

@@ -1,5 +1,6 @@
 export function createSpinner(parent) {
     //로딩 이미지를 추가할 DOM 요소(spinner-area) 가져오기
+    //탑뉴스, 최신뉴스 각 세션의 class spinner-area  
     const spinnerAreaEl = parent.querySelector('.spinner-area');
     //img 요소 생성
     const imageEl = document.createElement('img');
