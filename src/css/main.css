@@ -40,6 +40,37 @@ a {
     border-left: 1px solid #5a6268;
 }
 
+.news {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #5a6268;
+    min-height: 200px;
+    padding: 20px 10px;
+}
+
+.information .title {
+    font-size: 25px;
+}
+
+.information .title:hover {
+    color: #add8e6;
+}
+
+.information .description {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.thumbnail-area {
+    max-width: 140px;
+}
+
+.thumbnail-area .thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
 header {
     color: #7d99a3;
     text-align: center;
