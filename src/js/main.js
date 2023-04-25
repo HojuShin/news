@@ -59,7 +59,11 @@ function renderTopNews() {
                 articleSection.append(...articleList);
                 //articleSection(topNewsList) 밑으로 spinner, createTopNewsElement가 있음
             })
-    }, 1500);
+            .finally(() => {
+                //조회한 데이터 DOM추가 작업 끝나면, 로딩 이미지 제거
+                hideSpinner(articleSection);
+            })
+    }, 1000);
 };
 
 //latestNews  로딩이미지 영역 설정(spinner 인자 전달), 데이터 요청, 데이터 전달(createLatestNewsElement인자 전달)
@@ -78,8 +82,18 @@ function renderLatestNews() {
 
                 latestNewsList.append(...articleList);
             })
-    }, 1500);
+            .finally(() => {
+                //조회한 데이터 DOM추가 작업 끝나면, 로딩 이미지 제거
+                hideSpinner(latestNewsList);
+            })
+    }, 1000);
 };
+
+//로딩 이미지 제거
+function hideSpinner(parent) {
+    const spinnerArea = parent.querySelector('.spinner-area');
+    spinnerArea.style.display = 'none'; 
+}
 
 document.addEventListener('DOMContentLoaded', () => { //데이터 조회 시에는 리소스에 접근 X
     renderTopNews();
